@@ -255,7 +255,7 @@ PrefabInstance:
     - target: {fileID: 493778148736220988, guid: 18a259a2066bb2a4c8ee16c16a65e01b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.287
+      value: -0.432
       objectReference: {fileID: 0}
     - target: {fileID: 493778148736220988, guid: 18a259a2066bb2a4c8ee16c16a65e01b,
         type: 3}
@@ -265,7 +265,7 @@ PrefabInstance:
     - target: {fileID: 493778148736220988, guid: 18a259a2066bb2a4c8ee16c16a65e01b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.218
+      value: -8.521
       objectReference: {fileID: 0}
     - target: {fileID: 493778148736220988, guid: 18a259a2066bb2a4c8ee16c16a65e01b,
         type: 3}
@@ -334,7 +334,32 @@ PrefabInstance:
     - target: {fileID: 5455983491138653634, guid: 18a259a2066bb2a4c8ee16c16a65e01b,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883311820659228454, guid: 18a259a2066bb2a4c8ee16c16a65e01b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883311820659228454, guid: 18a259a2066bb2a4c8ee16c16a65e01b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.532876
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883311820659228454, guid: 18a259a2066bb2a4c8ee16c16a65e01b,
+        type: 3}
+      propertyPath: m_Color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883311820659228454, guid: 18a259a2066bb2a4c8ee16c16a65e01b,
+        type: 3}
+      propertyPath: m_Range
+      value: 0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883311820659228454, guid: 18a259a2066bb2a4c8ee16c16a65e01b,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 8.85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18a259a2066bb2a4c8ee16c16a65e01b, type: 3}
@@ -344,72 +369,14 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 851591629}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1056220355
+--- !u!21 &1050883658
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ember (Instance)
-  m_Shader: {fileID: 4800000, guid: 2681f3ee800ac6349bd3a610c05e3bb8, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _EmberTex:
-        m_Texture: {fileID: 2800000, guid: 59165508b65b8fa4084cdcdbdef7bc9c, type: 3}
-        m_Scale: {x: 6.06, y: 2.02}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionTex:
-        m_Texture: {fileID: 2800000, guid: c991a5d3d86010343b53f5832ff61bd3, type: 3}
-        m_Scale: {x: 6.06, y: 2.02}
-        m_Offset: {x: 0, y: 0}
-    - _Height:
-        m_Texture: {fileID: 2800000, guid: 59165508b65b8fa4084cdcdbdef7bc9c, type: 3}
-        m_Scale: {x: 6.06, y: 2.02}
-        m_Offset: {x: 0, y: 0}
-    - _MainHeight:
-        m_Texture: {fileID: 2800000, guid: 1a3dedc97e58b9d4f809a51c1466e109, type: 3}
-        m_Scale: {x: 4.2, y: 0.5}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b8b78d0da972a0745b490712b9357016, type: 3}
-        m_Scale: {x: 4.2, y: 0.5}
-        m_Offset: {x: 0, y: 0}
-    - _Normal:
-        m_Texture: {fileID: 2800000, guid: 887ee2d517e9f214b95a6e5cfe9bbe03, type: 3}
-        m_Scale: {x: 6.06, y: 2.02}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BurnRadius: 0.53
-    - _BurnSoftness: 0.1
-    - _EmissionStrentgh: 2
-    - _Glossiness: 0.5
-    - _Metallic: 0
-    - _Parallax: 0.12
-    - _Radius: 0.4
-    - _Softness: 0.1
-    m_Colors:
-    - _BurnColor: {r: 0.066037714, g: 0.033072505, b: 0.01152545, a: 1}
-    - _Color: {r: 0.5849056, g: 0.4612449, b: 0.31728372, a: 1}
-    - _EmberColor: {r: 1, g: 0.22018059, b: 0.06132078, a: 1}
-    - _EmissionColor: {r: 1, g: 0.12598437, b: 0, a: 1}
-    - _Position: {r: 0.287, g: 0.616, b: -8.218, a: 0}
---- !u!21 &1241903227
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Ember (Instance) (Instance)
+  m_Name: Ember (Instance) (Instance) (Instance) (Instance) (Instance)
   m_Shader: {fileID: 4800000, guid: 2681f3ee800ac6349bd3a610c05e3bb8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -423,15 +390,15 @@ Material:
     m_TexEnvs:
     - _EmberTex:
         m_Texture: {fileID: 2800000, guid: ce035a4d5da3fa34a8f2b9a2a92c6657, type: 3}
-        m_Scale: {x: 6.06, y: 2.02}
+        m_Scale: {x: 0.54, y: 0.58}
         m_Offset: {x: 0, y: 0}
     - _EmissionTex:
         m_Texture: {fileID: 2800000, guid: d401d6cfa5dbfa248b166316e8b5716a, type: 3}
-        m_Scale: {x: 6.06, y: 2.02}
+        m_Scale: {x: 0.54, y: 0.58}
         m_Offset: {x: 0, y: 0}
     - _Height:
         m_Texture: {fileID: 2800000, guid: 304d3a7ad32e06f49a7e131cc7ea2d84, type: 3}
-        m_Scale: {x: 6.06, y: 2.02}
+        m_Scale: {x: 0.54, y: 0.58}
         m_Offset: {x: 0, y: 0}
     - _MainHeight:
         m_Texture: {fileID: 2800000, guid: 94978932172c1f44aada8adca8d35b09, type: 3}
@@ -443,7 +410,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Normal:
         m_Texture: {fileID: 2800000, guid: 87679929a62756a42a81f955ca9db9e7, type: 3}
-        m_Scale: {x: 6.06, y: 2.02}
+        m_Scale: {x: 0.54, y: 0.58}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BurnRadius: 0.24
@@ -459,7 +426,98 @@ Material:
     - _Color: {r: 0.5849056, g: 0.4612449, b: 0.31728372, a: 1}
     - _EmberColor: {r: 1, g: 0.22018059, b: 0.06132078, a: 1}
     - _EmissionColor: {r: 1, g: 0.12598437, b: 0, a: 1}
-    - _Position: {r: 0.287, g: 0.616, b: -8.218, a: 0}
+    - _Position: {r: -0.432, g: 0.616, b: -8.521, a: 0}
+--- !u!1 &1162337921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1162337923}
+  - component: {fileID: 1162337922}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1162337922
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162337921}
+  m_Enabled: 1
+  serializedVersion: 9
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.5
+  m_Range: 13.41
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1162337923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162337921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.81, y: -1.6232357, z: -8.68}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1388361075
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +716,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1241903227}
+  - {fileID: 1050883658}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -819,6 +877,7 @@ GameObject:
   - component: {fileID: 1605790981}
   - component: {fileID: 1605790980}
   - component: {fileID: 1605790979}
+  - component: {fileID: 1605790983}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -856,7 +915,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1056220355}
+  - {fileID: 1993671017}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -893,12 +952,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605790978}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.008, y: 1.011, z: -7.953}
+  m_LocalPosition: {x: 0.008000016, y: 1.011, z: -7.953}
   m_LocalScale: {x: 1.7934556, y: 0.43541452, z: 0.32939953}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!95 &1605790983
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605790978}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 47e321105f0684a43846949f2a3e04d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1786385513
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,3 +1068,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -42.063004, y: -34.542, z: -46.596}
+--- !u!21 &1993671017
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ember (Instance) (Instance) (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: 2681f3ee800ac6349bd3a610c05e3bb8, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _EmberTex:
+        m_Texture: {fileID: 2800000, guid: 59165508b65b8fa4084cdcdbdef7bc9c, type: 3}
+        m_Scale: {x: 6.06, y: 2.02}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionTex:
+        m_Texture: {fileID: 2800000, guid: c991a5d3d86010343b53f5832ff61bd3, type: 3}
+        m_Scale: {x: 6.06, y: 2.02}
+        m_Offset: {x: 0, y: 0}
+    - _Height:
+        m_Texture: {fileID: 2800000, guid: 59165508b65b8fa4084cdcdbdef7bc9c, type: 3}
+        m_Scale: {x: 6.06, y: 2.02}
+        m_Offset: {x: 0, y: 0}
+    - _MainHeight:
+        m_Texture: {fileID: 2800000, guid: 1a3dedc97e58b9d4f809a51c1466e109, type: 3}
+        m_Scale: {x: 4.2, y: 0.5}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: b8b78d0da972a0745b490712b9357016, type: 3}
+        m_Scale: {x: 4.2, y: 0.5}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 887ee2d517e9f214b95a6e5cfe9bbe03, type: 3}
+        m_Scale: {x: 6.06, y: 2.02}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BurnRadius: 0.53
+    - _BurnSoftness: 0.1
+    - _EmissionStrentgh: 4
+    - _Glossiness: 0.5
+    - _Metallic: 0
+    - _Parallax: 0.12
+    - _Radius: 0.4
+    - _Softness: 0.1
+    m_Colors:
+    - _BurnColor: {r: 0.066037714, g: 0.033072505, b: 0.01152545, a: 1}
+    - _Color: {r: 0.5849056, g: 0.4612449, b: 0.31728372, a: 1}
+    - _EmberColor: {r: 1, g: 0.22018059, b: 0.06132078, a: 1}
+    - _EmissionColor: {r: 1, g: 0.12598437, b: 0, a: 1}
+    - _Position: {r: -0.432, g: 0.616, b: -8.521, a: 0}
