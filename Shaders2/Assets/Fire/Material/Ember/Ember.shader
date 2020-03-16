@@ -19,7 +19,7 @@
         //Emission
         _EmissionColor("EmissionColor", Color) = (1,1,1,1)
         _EmissionTex("EmissionTex (RGB)", 2D) = "white" {}
-        _EmissionStrentgh("EmissionStrentgh", Range(0,2)) = 0
+        _EmissionStrentgh("EmissionStrentgh", Range(0,4)) = 0
 
          //Circle
         //_Position ("Position", Vector) = (0,0,0,0)

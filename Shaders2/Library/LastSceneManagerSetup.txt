@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Fire/Scenes/Fire.unity
+- path: Assets/Fire/Scenes/Cute.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

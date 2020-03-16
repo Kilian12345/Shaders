@@ -32,12 +32,12 @@ Material:
         m_Scale: {x: 6.06, y: 2.02}
         m_Offset: {x: 0, y: 0}
     - _MainHeight:
-        m_Texture: {fileID: 2800000, guid: 94978932172c1f44aada8adca8d35b09, type: 3}
-        m_Scale: {x: 5.28, y: 9.74}
+        m_Texture: {fileID: 2800000, guid: 1a3dedc97e58b9d4f809a51c1466e109, type: 3}
+        m_Scale: {x: 0, y: 0}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ae85e2dee015ed849a6d1c62d35b9c54, type: 3}
-        m_Scale: {x: 5.28, y: 9.74}
+        m_Texture: {fileID: 2800000, guid: b8b78d0da972a0745b490712b9357016, type: 3}
+        m_Scale: {x: 4.2, y: 0.5}
         m_Offset: {x: 0, y: 0}
     - _Normal:
         m_Texture: {fileID: 2800000, guid: 87679929a62756a42a81f955ca9db9e7, type: 3}
