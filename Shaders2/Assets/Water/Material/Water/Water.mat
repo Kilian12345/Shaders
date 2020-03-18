@@ -28,16 +28,18 @@ Material:
         m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _DepthMaxDistance: 11.21
-    - _FoamMaxDistance: 7.73
+    - _DepthMaxDistance: 24.9
+    - _FoamMaxDistance: 8.3
     - _FoamMinDistance: 0.04
     - _SurfaceDistortionAmount: 0.27
     - _SurfaceNoiseCutoff: 0.777
-    - _WaveColorDistance: 106.7
+    - _WaveColorDistance: 0.005
+    - _WaveColorHeight: -1.31
     - _WaveFrequency: 0.72
     - _WaveFrequency2: 1.25
     - _WaveFrequency3: 0.4
-    - _WaveHeight: 1.77
+    - _WaveHeight: 3.84
+    - _WaveRealHeight: -16.52
     - _WaveSpeed: -13.12
     - _WaveSpeed2: 7.23
     - _WaveSpeed3: 5
@@ -45,11 +47,11 @@ Material:
     - _WaveStrentgh2: 1.86
     - _WaveStrentgh3: 0.17
     m_Colors:
-    - _DepthGradientDeep: {r: 0.086, g: 0.407, b: 1, a: 0.749}
-    - _DepthGradientShallow: {r: 0.325, g: 0.807, b: 0.971, a: 0.725}
+    - _DepthGradientDeep: {r: 0.0039215684, g: 0.59308517, b: 1, a: 0.78431374}
+    - _DepthGradientShallow: {r: 0.4666666, g: 0.8737569, b: 0.98039216, a: 0.78431374}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _SurfaceNoiseScroll: {r: 0.03, g: 0.03, b: 0, a: 0}
-    - _WaveA: {r: 1, g: 0, b: 0.51, a: 1.53}
-    - _WaveB: {r: 0.92, g: 1, b: 0.25, a: 20}
-    - _WaveC: {r: 1, g: 1, b: 0.15, a: 10}
-    - _WaveTopColor: {r: 0.8301887, g: 0.16055535, b: 0.16055535, a: 1}
+    - _WaveA: {r: 2, g: 6.34, b: 0.39, a: 0.73}
+    - _WaveB: {r: 2, g: 1.19, b: 0.72, a: 12.34}
+    - _WaveC: {r: 3.69, g: 0.41, b: -0.31, a: 21.32}
+    - _WaveTopColor: {r: 0.7311321, g: 0.94852716, b: 1, a: 1}

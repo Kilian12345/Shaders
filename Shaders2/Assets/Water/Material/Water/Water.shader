@@ -1,4 +1,8 @@
-﻿Shader "Custom/Water"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Custom/Water"
 {
 	Properties
 	{
@@ -24,6 +28,8 @@
 
 		_WaveTopColor("_WaveTopColor", Color) = (1,1,1,1)
 		_WaveColorDistance("_WaveColorDistance",Float) = 0.777
+		_WaveColorHeight("_WaveColorHeight",Float) = 0.777
+		_WaveRealHeight("_WaveRealHeight",Float) = 0.777
 	}
 		SubShader
 	{
@@ -58,6 +64,8 @@
 		half _WaveHeight;
 		fixed4 _WaveTopColor;
 		half _WaveColorDistance;
+		half _WaveColorHeight;
+		half _WaveRealHeight;
 
 		float4 _DepthGradientShallow;
 		float4 _DepthGradientDeep;
@@ -75,7 +83,7 @@
 		sampler2D _CameraNormalsTexture;
 
 		//TEST
-		float4 Test;
+		float3 Test;
 
 
 		//Blend Two layer, used for the foam color
@@ -87,7 +95,7 @@
 			return float4(color, alpha);
 		}
 
-		float3 Waves(float4 wave, float3 p) 
+		float3 Waves(float4 wave, float3 p , float speed) 
 		{
 			float steepness = wave.z;
 			float wavelength = wave.w;
@@ -100,7 +108,7 @@
 			return float3
 			(
 				d.x * (a * cos(f)),
-				(a * sin(f)) * _WaveHeight,
+				(a * sin(f)),
 				d.y * (a * cos(f))
 			);
 		}
@@ -118,6 +126,8 @@
 			float2 noiseUV : TEXCOORD0;
 			float2 distortUV : TEXCOORD1;
 			float4 screenPosition : TEXCOORD2;
+			float3 worldPosKiki : TEXCOORD3;
+			float4 depthTex : TEXCOORD4;
 			float3 viewNormal : NORMAL;
 		};
 
@@ -131,22 +141,24 @@
 			float4 worldPos = mul(unity_ObjectToWorld, v.vertex);
 			float4 vertexDepth = UnityWorldToClipPos(v.vertex);
 			float4 screenVertexDepth = ComputeScreenPos(vertexDepth);
-			Test = worldPos;
+
 			// Depth Test
 			/*
-			float existingDepth01 = tex2Dlod(_CameraDepthTexture, float4(UNITY_PROJ_COORD(screenVertexDepth.xy / screenVertexDepth.w),1,1)).r;
+			float existingDepth01 = tex2Dlod(_CameraDepthTexture, float4(UNITY_PROJ_COORD(screenVertexDepth.xy / screenVertexDepth.w),0,0)).r;
 			float existingDepthLinear = LinearEyeDepth(existingDepth01);
 			float depthDifference = existingDepthLinear - screenVertexDepth.w;
 			float waterDepthDifference01 = saturate(depthDifference / _DepthMaxDistance);
-			depthTest = waterDepthDifference01;
+			o.depthTex = waterDepthDifference01;
 			*/
 
 			float3 gridPoint = worldPos.xyz;
 			float3 p = gridPoint;
-			p += Waves(_WaveA, gridPoint);
-			p += Waves(_WaveB, gridPoint);
-			p += Waves(_WaveC, gridPoint);
+			p += Waves(_WaveA, gridPoint, 1);
+			p += Waves(_WaveB, gridPoint, 0.5);
+			p += Waves(_WaveC, gridPoint, 0.25);
 			worldPos.xyz = p;
+
+			o.worldPosKiki = worldPos.xyz;
 
 			//worldPos.x = worldPos.x + (displacement * _WaveFrequency);
 			o.vertex = mul(UNITY_MATRIX_VP, worldPos);
@@ -177,7 +189,9 @@
 			float waterDepthDifference01 = saturate(depthDifference / _DepthMaxDistance);
 			float4 waterColor = lerp(_DepthGradientShallow, _DepthGradientDeep, waterDepthDifference01);
 
-			float4 waveTopColor = lerp(waterColor, _WaveTopColor, i.vertex.y + _WaveColorDistance);
+			//WaveTopColor
+			float4 waveTopColor = lerp(waterColor, _WaveTopColor, saturate((((i.worldPosKiki.y + _WaveRealHeight) * _WaveHeight) - _WaveColorHeight) * _WaveColorDistance) * i.worldPosKiki.y);
+			float4 lerpWave = (waveTopColor + waterColor) / 2;
 
 			// Retrieve the view-space normal of the surface behind the
 			// pixel we are currently rendering.
