@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FindBall : MonoBehaviour
 {
-    MeshRenderer[] meshRend;
+    public MeshRenderer[] meshRend;
     void Start()
     {
         meshRend = FindObjectsOfType<MeshRenderer>();
@@ -15,6 +15,7 @@ public class FindBall : MonoBehaviour
     {
         foreach(MeshRenderer mesh in meshRend)
         {
+            mesh.material.SetFloat("_ObjectRadius", transform.localScale.x);
             mesh.material.SetVector("_ObjectPosition", transform.position);
         }
     }
